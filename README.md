@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# Mini MVP de Match Inteligente - LEGAL.AI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto implementa um MVP simples para um sistema de matchmaking com inteligência artificial simulada, conforme solicitado no desafio prático para a vaga de Desenvolvedor(a) Full Stack da LEGAL.AI.
 
-## Available Scripts
+## Visão geral
 
-In the project directory, you can run:
+A aplicação consiste em uma interface onde o usuário pode preencher um formulário com seus dados (Nome, Área de Interesse e Localização) e, ao clicar no botão "Buscar Conexões", recebe uma lista de 3 perfis compatíveis com informações de nome, descrição e nível de afinidade.
 
-### `npm start`
+## Instruções para rodar o projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Pré-requisitos
+- Node.js (versão 14 ou superior)
+- npm ou yarn
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Passos para execução
 
-### `npm test`
+1. Clone o repositório:
+```bash
+git clone [URL_DO_REPOSITÓRIO]
+cd [NOME_DA_PASTA]
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Instale as dependências:
+```bash
+npm install
+# ou, se usar yarn:
+yarn install
+```
 
-### `npm run build`
+3. Execute o projeto em modo de desenvolvimento:
+```bash
+npm start
+# ou, se usar yarn:
+yarn start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Acesse a aplicação no navegador:
+```
+http://localhost:3000
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Principais decisões tomadas durante o desenvolvimento
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Tecnologias e arquitetura
+- **React**: Escolhido pela facilidade de criar componentes reutilizáveis e pela experiência prévia com a biblioteca.
+- **CSS puro**: Optei por não utilizar frameworks CSS para demonstrar habilidades de estilização e para manter o projeto mais leve.
+- **Abordagem stateful**: O estado da aplicação é gerenciado com hooks useState, adequado para a complexidade atual do MVP.
 
-### `npm run eject`
+### Simulação de IA
+- Implementei um algoritmo simples que calcula o nível de afinidade baseado em:
+  - Correspondência de interesses (peso maior)
+  - Proximidade geográfica (peso menor)
+  - Variação aleatória (para tornar os resultados mais dinâmicos)
+- Os dados são pré-configurados com uma variedade de perfis relacionados à área jurídica e tecnologia
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### UI/UX
+- Design responsivo que se adapta a diferentes tamanhos de tela
+- Paleta de cores profissional com destaque em azul (cor frequentemente associada à confiança e tecnologia)
+- Feedback visual para interações (hover, focus, etc.)
+- Layout claro e organizado para facilitar a compreensão e uso
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## O que eu faria diferente se tivesse mais tempo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Melhorias na simulação do algoritmo de IA**:
+   - Implementaria um sistema de tags e pesos mais sofisticado
+   - Adicionaria histórico de buscas e feedback para "aprendizado" do sistema
+   - Incluiria mais variáveis para cálculo de afinidade (experiência, habilidades técnicas, etc.)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Arquitetura e código**:
+   - Dividiria a aplicação em mais componentes para melhor organização e reutilização
+   - Implementaria testes unitários e de integração
+   - Adicionaria um gerenciamento de estado mais robusto (como Context API ou Redux) pensando na escalabilidade
 
-## Learn More
+3. **UI/UX enriquecida**:
+   - Adicionaria animações suaves para as transições entre estados
+   - Implementaria filtragem adicional dos resultados
+   - Criaria perfis mais detalhados com avatares e informações de contato
+   - Incluiria modo escuro (dark mode)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **Funcionalidades adicionais**:
+   - Sistema de autenticação para salvar perfis
+   - Chat simulado entre os usuários conectados
+   - Opção de exportar os contatos encontrados
+   - Dashboard com estatísticas de uso e efetividade dos matches
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. **Backend real**:
+   - Implementaria uma API em Node.js com Express
+   - Banco de dados para armazenar perfis e interações (MongoDB ou PostgreSQL)
+   - Lógica de matchmaking mais sofisticada no servidor
 
-### Code Splitting
+## Conclusão
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este MVP demonstra a capacidade de criar uma interface funcional e agradável para um sistema de matchmaking, atendendo aos requisitos do desafio com uma solução simples e eficaz, ao mesmo tempo em que estabelece bases para futuras melhorias e expansões do produto.
