@@ -1,36 +1,32 @@
-# Mini MVP de Match Inteligente - LEGAL.AI
+# Legal.AI - Sistema de Match Inteligente
 
-Este projeto implementa um MVP simples para um sistema de matchmaking com inteligência artificial simulada, conforme solicitado no desafio prático para a vaga de Desenvolvedor(a) Full Stack da LEGAL.AI.
-
-## Visão geral
-
-A aplicação consiste em uma interface onde o usuário pode preencher um formulário com seus dados (Nome, Área de Interesse e Localização) e, ao clicar no botão "Buscar Conexões", recebe uma lista de 3 perfis compatíveis com informações de nome, descrição e nível de afinidade.
+uma plataforma que conecta pessoas com base em seus interesses e localização na área jurídica.
 
 ## Instruções para rodar o projeto
 
 ### Pré-requisitos
-- Node.js (versão 14 ou superior)
+- node.js (versão 14 ou superior)
 - npm ou yarn
 
 ### Passos para execução
 
-1. Clone o repositório:
+1. clone o repositório:
 ```bash
-git clone [URL_DO_REPOSITÓRIO]
-cd [NOME_DA_PASTA]
+git clone https://github.com/devfe00/legal.ai.git
+cd legal.ai
 ```
 
-2. Instale as dependências:
+2. instale as dependências:
 ```bash
 npm install
-# ou, se usar yarn:
+# ou
 yarn install
 ```
 
 3. Execute o projeto em modo de desenvolvimento:
 ```bash
 npm start
-# ou, se usar yarn:
+# ou
 yarn start
 ```
 
@@ -42,52 +38,40 @@ http://localhost:3000
 ## Principais decisões tomadas durante o desenvolvimento
 
 ### Tecnologias e arquitetura
-- **React**: Escolhido pela facilidade de criar componentes reutilizáveis e pela experiência prévia com a biblioteca.
-- **CSS puro**: Optei por não utilizar frameworks CSS para demonstrar habilidades de estilização e para manter o projeto mais leve.
-- **Abordagem stateful**: O estado da aplicação é gerenciado com hooks useState, adequado para a complexidade atual do MVP.
+- react: escolhi o react pela facilidade de criar componentes reutilizáveis e pela familiaridade com a biblioteca.
+- css puro: optei por não usar frameworks css para ter mais controle na estilização e deixar o projeto mais leve.
+- abordagem stateful: o estado da aplicação é controlado com hooks useState, que atendem bem à simplicidade do projeto.
 
-### Simulação de IA
-- Implementei um algoritmo simples que calcula o nível de afinidade baseado em:
-  - Correspondência de interesses (peso maior)
-  - Proximidade geográfica (peso menor)
-  - Variação aleatória (para tornar os resultados mais dinâmicos)
-- Os dados são pré-configurados com uma variedade de perfis relacionados à área jurídica e tecnologia
+### Sistema de matchmaking
+Desenvolvi um algoritmo que calcula afinidade baseado principalmente em:
+- correspondência entre áreas de interesse
+- proximidade geográfica
+- pequena variação aleatória para tornar os resultados mais naturais
 
-### UI/UX
-- Design responsivo que se adapta a diferentes tamanhos de tela
-- Paleta de cores profissional com destaque em azul (cor frequentemente associada à confiança e tecnologia)
-- Feedback visual para interações (hover, focus, etc.)
-- Layout claro e organizado para facilitar a compreensão e uso
+### Experiência do usuário
+priorizei uma interface clara e intuitiva, com feedback visual para as interações e um design responsivo que funciona bem em diferentes dispositivos. A paleta de cores em tons de azul transmite profissionalismo e confiabilidade, valores importantes para um sistema na área jurídica.
 
-## O que eu faria diferente se tivesse mais tempo
+## O que eu faria diferente com mais tempo
 
-1. **Melhorias na simulação do algoritmo de IA**:
-   - Implementaria um sistema de tags e pesos mais sofisticado
-   - Adicionaria histórico de buscas e feedback para "aprendizado" do sistema
-   - Incluiria mais variáveis para cálculo de afinidade (experiência, habilidades técnicas, etc.)
+### Aprimoramento do algoritmo
+- implementaria um sistema de tags e pesos mais sofisticado
+- adicionaria análise de habilidades específicas e experiência profissional
+- criaria um sistema de recomendação que aprende com as escolhas dos usuários
 
-2. **Arquitetura e código**:
-   - Dividiria a aplicação em mais componentes para melhor organização e reutilização
-   - Implementaria testes unitários e de integração
-   - Adicionaria um gerenciamento de estado mais robusto (como Context API ou Redux) pensando na escalabilidade
+### Melhorias técnicas
+- dividiria a aplicação em mais componentes reutilizáveis
+- umplementaria testes unitários e de integração
+- adicionaria gerenciamento de estado mais robusto para facilitar a escalabilidade
 
-3. **UI/UX enriquecida**:
-   - Adicionaria animações suaves para as transições entre estados
-   - Implementaria filtragem adicional dos resultados
-   - Criaria perfis mais detalhados com avatares e informações de contato
-   - Incluiria modo escuro (dark mode)
+### Funcionalidades adicionais
+- perfis mais detalhados com histórico profissional e formação acadêmica
+- sistema de filtros avançados para refinamento das buscas
+- opção de salvar conexões favoritas e histórico de buscas
+- integração com calendário para agendamento de reuniões
 
-4. **Funcionalidades adicionais**:
-   - Sistema de autenticação para salvar perfis
-   - Chat simulado entre os usuários conectados
-   - Opção de exportar os contatos encontrados
-   - Dashboard com estatísticas de uso e efetividade dos matches
+### Backend e infraestrutura
+- criaria uma API dedicada para processamento do matchmaking
+- implementaria um banco de dados para armazenar perfis e interações
+- adicionaria autenticação e níveis de acesso personalizados
 
-5. **Backend real**:
-   - Implementaria uma API em Node.js com Express
-   - Banco de dados para armazenar perfis e interações (MongoDB ou PostgreSQL)
-   - Lógica de matchmaking mais sofisticada no servidor
-
-## Conclusão
-
-Este MVP demonstra a capacidade de criar uma interface funcional e agradável para um sistema de matchmaking, atendendo aos requisitos do desafio com uma solução simples e eficaz, ao mesmo tempo em que estabelece bases para futuras melhorias e expansões do produto.
+esse projeto marca o início de uma ferramenta que pode se transformar em uma plataforma completa de networking profissional para a área jurídica, facilitando conexões valiosas entre profissionais com interesses complementares.
